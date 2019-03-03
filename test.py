@@ -6,4 +6,7 @@ def func():
     """this is a function used for test"""
     print("hello world")
     """printing hello world"""
-help(func)
+
+def filefunc():
+    f = open("temp.txt", "a+")
+    
