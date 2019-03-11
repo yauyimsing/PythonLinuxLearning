@@ -1,12 +1,9 @@
-#-*- coding:utf-8 -*-
-# this is for test of learning python linux
+from socket import *
 
-
-def func():
-    """this is a function used for test"""
-    print("hello world")
-    """printing hello world"""
-
-def filefunc():
-    f = open("temp.txt", "a+")
-    
+udp = socket(AF_INET, SOCK_DGRAM)
+udp.bind(("", 7777))
+while True:
+    print("go on")
+    data = udp.recvfrom(1024)
+    print(data)
+    udp.sendto(b"baka", ("192.168.248.1", 8080))
